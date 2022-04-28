@@ -1,17 +1,11 @@
 import { FC } from 'react'
-import { ReactComponent as ReactLogo } from '../images/logo.svg'
+import { IoEarth } from 'react-icons/io5'
 
 const Navbar: FC = () => {
   return (
-    <nav className="flex bg-[#202129] pr-[30px] pl-[10px] py-[25px] items-center shadow-md shadow-[#61dafc]/70 z-10 ">
-      <ReactLogo className="w-20" fill="#61DAFB" />
-      <span className="font-bold text-2xl text-[#61DAFB] mr-auto">
-        ReactFacts
-      </span>
-
-      <span className="text-white font-semibold text-xl">
-        React Course - Project 1
-      </span>
+    <nav className="flex justify-center bg-[#F55A5A] py-4 text-center font-sans text-white">
+      <IoEarth className="mr-2 self-center text-xl text-[36px]" />
+      <span className="self-center text-[18px] ">my travel journal.</span>
     </nav>
   )
 }

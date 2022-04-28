@@ -1,13 +1,17 @@
-import React from 'react'
-import ReactReasons from './components/ReactReasons'
 import Navbar from './components/Navbar'
-import DigitalBusinessCard from './components/DigitalBusinessCard'
-import './App.css'
+import TourPage from './components/Main'
+import tourInfoType from './types/location'
+
+import toursData from './data'
 
 function App() {
+  const AllTours = (toursData as tourInfoType[]).map(tour => {
+    return <TourPage {...tour} />
+  })
   return (
-    <div className='h-full flex justify-center items-center bg-[#1c1c1c]'>
-      <DigitalBusinessCard />
+    <div>
+      <Navbar />
+      <div className="px-16 py-8">{AllTours}</div>
     </div>
   )
 }
